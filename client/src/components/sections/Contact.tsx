@@ -60,20 +60,7 @@ export function Contact() {
             className="glass-card p-8 md:p-12 rounded-lg"
           >
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              {/* Group 1 */}
               <div className="space-y-6">
-                <div>
-                  <label className="block font-display text-xs text-zinc-400 uppercase tracking-widest mb-2">
-                    {t('contact.form.company')} *
-                  </label>
-                  <input
-                    {...register("companyName")}
-                    className="w-full glass-input px-4 py-3 rounded"
-                    disabled={submitContact.isPending}
-                  />
-                  {errors.companyName && <span className="text-red-400 text-xs mt-1 block">{errors.companyName.message}</span>}
-                </div>
-                
                 <div>
                   <label className="block font-display text-xs text-zinc-400 uppercase tracking-widest mb-2">
                     {t('contact.form.person')} *
@@ -85,19 +72,33 @@ export function Contact() {
                   />
                   {errors.contactPersonName && <span className="text-red-400 text-xs mt-1 block">{errors.contactPersonName.message}</span>}
                 </div>
-
+                
                 <div>
                   <label className="block font-display text-xs text-zinc-400 uppercase tracking-widest mb-2">
-                    {t('contact.form.designation')} *
+                    {t('contact.form.company')} *
                   </label>
                   <input
-                    {...register("designation")}
+                    {...register("companyName")}
                     className="w-full glass-input px-4 py-3 rounded"
                     disabled={submitContact.isPending}
                   />
-                  {errors.designation && <span className="text-red-400 text-xs mt-1 block">{errors.designation.message}</span>}
+                  {errors.companyName && <span className="text-red-400 text-xs mt-1 block">{errors.companyName.message}</span>}
                 </div>
 
+                <div>
+                  <label className="block font-display text-xs text-zinc-400 uppercase tracking-widest mb-2">
+                    Sector *
+                  </label>
+                  <input
+                    {...register("sector")}
+                    className="w-full glass-input px-4 py-3 rounded"
+                    disabled={submitContact.isPending}
+                  />
+                  {errors.sector && <span className="text-red-400 text-xs mt-1 block">{(errors as any).sector?.message}</span>}
+                </div>
+              </div>
+
+              <div className="space-y-6">
                 <div>
                   <label className="block font-display text-xs text-zinc-400 uppercase tracking-widest mb-2">
                     {t('contact.form.email')} *
@@ -113,80 +114,6 @@ export function Contact() {
 
                 <div>
                   <label className="block font-display text-xs text-zinc-400 uppercase tracking-widest mb-2">
-                    {t('contact.form.phone')} *
-                  </label>
-                  <input
-                    {...register("phoneNumber")}
-                    className="w-full glass-input px-4 py-3 rounded"
-                    disabled={submitContact.isPending}
-                  />
-                  {errors.phoneNumber && <span className="text-red-400 text-xs mt-1 block">{errors.phoneNumber.message}</span>}
-                </div>
-                
-                <div>
-                  <label className="block font-display text-xs text-zinc-400 uppercase tracking-widest mb-2">
-                    {t('contact.form.website')}
-                  </label>
-                  <input
-                    {...register("website")}
-                    className="w-full glass-input px-4 py-3 rounded"
-                    disabled={submitContact.isPending}
-                  />
-                </div>
-              </div>
-
-              {/* Group 2 */}
-              <div className="space-y-6">
-                <div>
-                  <label className="block font-display text-xs text-zinc-400 uppercase tracking-widest mb-2">
-                    {t('contact.form.category')} *
-                  </label>
-                  <input
-                    {...register("manufacturingCategory")}
-                    className="w-full glass-input px-4 py-3 rounded"
-                    disabled={submitContact.isPending}
-                  />
-                  {errors.manufacturingCategory && <span className="text-red-400 text-xs mt-1 block">{errors.manufacturingCategory.message}</span>}
-                </div>
-
-                <div>
-                  <label className="block font-display text-xs text-zinc-400 uppercase tracking-widest mb-2">
-                    {t('contact.form.products')} *
-                  </label>
-                  <input
-                    {...register("typeOfProducts")}
-                    className="w-full glass-input px-4 py-3 rounded"
-                    disabled={submitContact.isPending}
-                  />
-                  {errors.typeOfProducts && <span className="text-red-400 text-xs mt-1 block">{errors.typeOfProducts.message}</span>}
-                </div>
-
-                <div>
-                  <label className="block font-display text-xs text-zinc-400 uppercase tracking-widest mb-2">
-                    {t('contact.form.location')} *
-                  </label>
-                  <input
-                    {...register("location")}
-                    className="w-full glass-input px-4 py-3 rounded"
-                    disabled={submitContact.isPending}
-                  />
-                  {errors.location && <span className="text-red-400 text-xs mt-1 block">{errors.location.message}</span>}
-                </div>
-
-                <div>
-                  <label className="block font-display text-xs text-zinc-400 uppercase tracking-widest mb-2">
-                    {t('contact.form.machines')} *
-                  </label>
-                  <input
-                    {...register("estimatedMachines")}
-                    className="w-full glass-input px-4 py-3 rounded"
-                    disabled={submitContact.isPending}
-                  />
-                  {errors.estimatedMachines && <span className="text-red-400 text-xs mt-1 block">{errors.estimatedMachines.message}</span>}
-                </div>
-
-                <div>
-                  <label className="block font-display text-xs text-zinc-400 uppercase tracking-widest mb-2">
                     {t('contact.form.purpose')} *
                   </label>
                   <input
@@ -197,19 +124,6 @@ export function Contact() {
                   {errors.purposeOfContact && <span className="text-red-400 text-xs mt-1 block">{errors.purposeOfContact.message}</span>}
                 </div>
               </div>
-            </div>
-
-            <div className="mb-8">
-              <label className="block font-display text-xs text-zinc-400 uppercase tracking-widest mb-2">
-                {t('contact.form.message')} *
-              </label>
-              <textarea
-                {...register("message")}
-                rows={4}
-                className="w-full glass-input px-4 py-3 rounded resize-none"
-                disabled={submitContact.isPending}
-              />
-              {errors.message && <span className="text-red-400 text-xs mt-1 block">{errors.message.message}</span>}
             </div>
 
             <button
