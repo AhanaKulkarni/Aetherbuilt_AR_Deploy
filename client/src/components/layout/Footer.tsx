@@ -10,7 +10,7 @@ export function Footer() {
         <div className="flex items-center gap-3">
           <Hexagon className="w-5 h-5 text-zinc-500" strokeWidth={1.5} />
           <span className="font-display font-bold text-sm tracking-widest text-zinc-500 uppercase">
-            Aetherbuild
+            Aetherbuilt
           </span>
         </div>
         

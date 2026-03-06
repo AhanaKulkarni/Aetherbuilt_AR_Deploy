@@ -23,7 +23,7 @@ export const translations = {
     'problem.card3.desc': 'Manual spreadsheets, endless email threads, and zero real-time visibility into manufacturing milestones.',
 
     // Solution
-    'solution.header': 'AETHERBUILD ARCHITECTURE',
+    'solution.header': 'AETHERBUILT ARCHITECTURE',
     'solution.title': 'The Industrial Purchase OS.',
     'solution.card1.title': 'Unified Vendor Network',
     'solution.card1.desc': 'Access a curated, rigorously vetted network of tier-1 global machinery manufacturers in one interface.',
@@ -90,7 +90,7 @@ export const translations = {
     'problem.card3.desc': 'मैनुअल स्प्रेडशीट, अंतहीन ईमेल थ्रेड, और विनिर्माण मील के पत्थर में शून्य वास्तविक समय दृश्यता।',
 
     // Solution
-    'solution.header': 'AETHERBUILD आर्किटेक्चर',
+    'solution.header': 'AETHERBUILT आर्किटेक्चर',
     'solution.title': 'औद्योगिक खरीद ऑपरेटिंग सिस्टम।',
     'solution.card1.title': 'एकीकृत विक्रेता नेटवर्क',
     'solution.card1.desc': 'एक ही इंटरफेस में टियर-1 वैश्विक मशीनरी निर्माताओं के क्यूरेटेड, कड़ाई से जांचे गए नेटवर्क तक पहुंच।',

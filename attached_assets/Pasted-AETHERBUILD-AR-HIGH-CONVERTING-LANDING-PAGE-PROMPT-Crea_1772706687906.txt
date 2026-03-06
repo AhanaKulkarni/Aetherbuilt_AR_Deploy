@@ -94,7 +94,7 @@ Title:
 
 The Industrial Purchase Operating System
 
-Explain the AetherBuild platform through 4 glass cards:
+Explain the AetherBuilt platform through 4 glass cards:
 
 Verified Machine Marketplace
 Manufacturers list machines with structured specifications, transparent pricing, and standardized data.
@@ -137,7 +137,7 @@ Manufacturers: List Your Machines
 
 Short description:
 
-AetherBuild AR enables machinery manufacturers to directly reach verified industrial buyers, shorten sales cycles, and digitize procurement workflows.
+AetherBuilt AR enables machinery manufacturers to directly reach verified industrial buyers, shorten sales cycles, and digitize procurement workflows.
 
 Glass panel with CTA button:
 
